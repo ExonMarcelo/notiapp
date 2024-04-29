@@ -1,0 +1,21 @@
+.sideBar{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    padding: 24px;
+}
+
+.sideBarItem span {
+    color: var(--secondary);
+}
+
+.sideBarItem:hover span {
+    color: var(--primary);
+}
+/* .sideBarItem:hover svg path {
+    stroke: var(--primary);
+} */
+
+.sideBarItemSelected span {
+    color: var(--primary);
+}

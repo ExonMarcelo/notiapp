@@ -6,6 +6,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg-white: #fff;
+  --primary: #605DFF;
+  --secondary: #424662;
+  --grey-100: #F1F3FF;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -35,5 +39,5 @@ body {
 body{
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: #F1F3FF;
 }

@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="flex justify-center w-full">
           <div className="relative min-w-[1120px] w-[1120px] grid grid-cols-12 gap-[32px]">
             <Sidebar/>
-            <main className="justify-center col-start-4 col-span-6 h-[3000px] bg-white">
+            <main className="justify-center col-start-4 col-span-6">
               {children}
             </main>
             <aside className="min-h-screen grid col-start-10 col-span-3 fixed">

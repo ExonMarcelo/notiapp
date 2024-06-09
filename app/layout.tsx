@@ -25,8 +25,9 @@ export default function RootLayout({
             <main className="justify-center col-start-4 col-span-6">
               {children}
             </main>
-            <aside className="min-h-screen grid col-start-10 col-span-3 fixed">
-              <p>sidebar</p>
+            <aside className="min-h-screen col-start-10 col-end-13 relative bg-white">
+              <p>Tendencias</p>
+              <p>Noticias destacadas</p>
             </aside>
           </div>
         </div>

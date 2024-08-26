@@ -1,4 +1,4 @@
-import apiFactos, { setAPIToken } from "@/app/lib/apiFactos";
+import apiFactos, { setAPIToken } from "@/app/services/apiFactos";
 import { useEffect, useState } from "react";
 
 export default function useNews(){
@@ -27,7 +27,6 @@ export default function useNews(){
           
           apiFactos.post('/users/login', loginData)
             .then((response) => {
-            //   console.log(JSON.stringify(response.data));
             console.log(response.data)
             localStorage.setItem("apiToken", response.data?.data?.token?.token)
             setAPIToken(response.data?.data?.token?.token || "")

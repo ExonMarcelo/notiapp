@@ -1,20 +1,31 @@
-"use client";
-import Link from "next/link";
-import useNews from "./useNews";
-import icons from "@/app/utils/icons";
+// "use client";
+// import Link from "next/link";
+// import useNews from "./useNews";
+// import icons from "@/app/utils/icons";
 import { Inter } from "next/font/google";
+import { getNews, getNewsDemo } from "@/app/services/news";
+import NewItem from "./NewItem";
 const inter = Inter({subsets: ["latin"]});
 
-export default function News(){
+export default async function News (){
     
-    const {
-        listPosts, isLoadingPosts
-    } = useNews()
+    // const {
+    //     listPosts, isLoadingPosts
+    // } = useNews()
+
+    const data = await getNewsDemo()
 
     return(
         <>
-            <h1 className="mt-[16px] text-[28px] font-bold text-[#2E3543] leading-normal">Noticias</h1>
             {
+                data.map((item: any, index: number)=>
+                    <>
+                        {/* <p>{index + 1} - {item.fact}</p> */}
+                        <NewItem data={item} key={index}/>
+                    </>
+                )
+            }
+            {/* {
                 isLoadingPosts ?
                 <p>Cargando...</p>
                 :
@@ -65,7 +76,7 @@ export default function News(){
                         </Link>
                     </div>
                 )
-            }
+            } */}
         </>
     )
 }
